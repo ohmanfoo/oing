@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block blog %}
+    <article id="blog" class='flex-content'>
+	    <div class="controls post">
+	        <button class="add-cat">Add Cat</button>
+	    </div>
+
+		<div class="cat-controls">
+		    <ul id='cat-list'>	    	
+		    </ul>	    
+		</div>
+    </article>
+    <article id='side-projects' class='flex-content'>
+    	<div class='cat-den'>
+		    <script type="text/template" data-template="cat">
+		        <li class="cat post" data-id="Cat00">
+		        	<h3 class = 'project'>'cat.name'</h3>
+		            <img class = 'cat-pic' src="cat.img" alt="cat.pic">
+		            <p>'cat.clicks'</p>
+		        </li>
+		    </script>
+		</div>
+    </article>
+{% endblock %}

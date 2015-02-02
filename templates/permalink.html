@@ -1,0 +1,25 @@
+{% extends "post.html" %}
+
+{% block content %}
+<div class="post flex-content">
+  <div class="post-heading">
+    <div class="post-title">
+      <h2>{{post.subject}}</h2>
+    </div>
+
+    <div class="post-date">
+      <p>{{post.created.strftime("%b %d, %Y")}}</p>
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>{{post.content | safe}}</p>
+  </div>
+  <br>
+  <div class="posted-by">
+  	<p>{{post.createdby}}</p>
+
+  </div>
+
+</div>
+{% endblock %}

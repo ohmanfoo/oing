@@ -1,0 +1,39 @@
+{% extends "admin/register.html" %}
+
+{% block content %}
+  <h2>Add Invitation</h2>
+
+    <form method="post">
+      <label>
+        <div>first name</div>
+        <input type="text" name="firstname" value="{{firstname}}">
+      </label>
+      <div class="error">
+            {{error_firstname}}
+      </div>
+      <label>
+        <div>last name</div>
+        <input type="text" name="lastname" value="{{lastname}}">
+      </label>
+      <div class="error">
+            {{error_lastname}}
+      </div>
+
+      <label>
+        <div>email</div>
+        <input type="text" name="email" value="{{email}}">
+      </label>
+      <div class="error">
+            {{error_email}}
+      </div>
+
+      <div class="error">{{error}}</div>
+
+      <input type="submit">
+    </form>
+
+
+{% block table %}
+{% endblock %}
+
+{% endblock %}

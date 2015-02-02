@@ -1,0 +1,54 @@
+var start = function () {
+	'use strict';
+	var config = {
+	    blgctnr = 'box box2',
+	    pjctnr = 'box box3',
+	    blog = 'blog'
+	    side-projects = 'side-projects',
+	    orientation = (window.innerHeight + 40 >= window.innerWidth),
+	    },
+	    blogContent = document.getElementById(blog),
+	    pjContent = document.getElementById(side-projects),
+	    getHeading = function (cat) {
+	        var categ = document.getElementsByClassName(cat);
+	        return categ;
+	    },
+	    bloghead = getHeading(blogCtnr),
+	    pjhead = getHeading(pjCtnr),
+	    onLoadCheck = function () {
+	        if (orientation) {
+	            pjContent.style.width = '100%';
+	            blogContent.style.width = '100%';
+	            return;
+	        }
+	    },
+        onClick = function (content, other) {
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                if (other.style.display === 'none') {
+                    content.style.width = '75%';
+                } else {
+                    if (orientation) {
+                        other.style.width = '100%';
+                        content.style.width = '100%';
+                    } else {
+                        if (document.getElementById(side-projects) === content) {
+                            content.style.width = '32.2%';
+                            other.style.width = '66%';
+                        } else {
+                            content.style.width = '66.5%';
+                            other.style.width = '32.2%';
+                        }
+                    }
+                }
+            } else {
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    other.style.width = '100%';
+                } else {
+                    content.style.display = 'none';
+                    other.style.width = '100%';
+                }
+            }
+        };
+}

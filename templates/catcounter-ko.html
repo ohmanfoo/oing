@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block blog %}
+    <article id="blog" class='flex-content'>
+	    <div class="controls post">
+	        <button class="add-cat">Add Cat</button>
+	    </div>
+
+		<div class="cat-controls">
+		    <ul id='cat-list'>	    	
+		    </ul>	    
+		</div>
+    </article>
+    <article id='side-projects' class='flex-content'>
+    	<div class='cat-den'>
+	        <li class="cat post" data-bind="with: currentCat">
+	        	<h3 class = 'project' data-bind="text: name"></h3>
+	            <img class = 'cat-pic' src="" data-bind="click: $parent.incrementCounter,
+	            attr: {src: imgSrc}" alt="cat.pic">
+	            <div data-bind="text: clickCount"></div>
+	            <div>
+	            	<h4>Tags:</h4>
+	            	<ul data-bind="foreach: tags">
+	            		<li data-bind="text: $data"></li>
+	            	</ul>
+	            </div>
+	        </li>
+		</div>
+    </article>
+{% endblock %}

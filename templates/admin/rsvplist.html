@@ -1,0 +1,25 @@
+{% extends "admin/new_invitee.html" %}
+
+	{% block table %}
+
+	<h3>Guest RSVP List</h3>
+      <ul class="nav nav-pills pull-right" style="margin-top: -3.1em;">
+      	<li><p>Sort: </p></li>
+        <li><a href="register?order=name">Name</a></li>
+        <li><a href="register?order=confirmed">Confirmed</a></li>
+        <li><a href="register?order=party">Party</a></li>
+      </ul>
+
+		{% for i in invites %}
+
+      <ul class="nav post-content">
+      	<li><p class="invite">{{i.fname}}</p></li>
+        <li><p class="invite">{{i.lname}}</p></li>
+        <li><p class="invite">{{i.email}}</p></li>
+        <li><p class="invite">{{i.auth_flag}}</p></li>
+        <li><p class="invite">{{i.psize}}</p></li>
+      </ul>
+
+		{% endfor %}
+
+	{% endblock %}

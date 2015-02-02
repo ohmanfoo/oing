@@ -1,0 +1,426 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    background-color: whitesmoke; 
+    font-family: 'Courier', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    text-decoration: none;
+}
+a:link {color:ghostwhite;}      /* unvisited link */
+a:visited {color:ghostwhite;}  /* visited link */
+a:hover {color:#FBF7FB;}  /* mouse over link */
+a:active {color:#FBF7FB;}  /* selected link */
+p {
+    margin: 0;
+    padding: 1em 5%;
+    color: black;
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 1em 5%;
+}
+body > div > div.footer > h2 > a {
+    font-family: 'denk one';
+    color: white;
+    text-shadow: .7415px .7415px .500001px #262626;
+}
+.white-font{
+    color: rgb(2, 6, 8);
+}
+p.side-url {
+    color: black;
+    background-color: rgb(251, 247, 251);
+    line-height: 1.8em;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.date{
+    font-size: smaller;
+    text-align: right;
+}
+#blog {
+    background-color: rgb(251, 247, 251);
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 50%;
+    flex-grow: 1;
+    justify-content: space-around;
+    width: 66.1%;
+    order: 4;
+    -webkit-order: 4;
+    overflow: auto;
+}
+#blog * {
+    display: block;
+}
+#side-projects  {
+    background-color: rgb(251, 247, 251);
+    border-top: 0;
+    border-color: black;
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 45%;
+    flex-grow: 1;
+    justify-content: space-around;
+    order: 5;
+    -webkit-order: 5;
+/*    overflow: auto;*/
+    text-align: center;
+    max-width: 85em;
+    margin-left: 2.5%;
+}
+#side-projects p {
+    color: black;
+    border-bottom: solid;
+    border-left-color: white;
+    border-bottom-color: #034569;
+}
+#side-projects > div > h3 > a {
+    color: white;
+}
+.banner {
+    text-shadow: 1.7415px 1.7415px 4.500001px #262626;
+    font-size: 3.5em;
+    text-align: center;
+    font-family: 'Josefin sans';
+    font-weight: 100;
+    color: rgb(251, 247, 251);
+}
+.box {
+    text-shadow: 1.7415px 1.7415px 1.500001px #262626;
+    color: rgb(251, 247, 251);
+    text-align: center;
+    background-color: rgba(100, 170, 208, 0.58);
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 25%;
+    float: left;
+}
+.box > h2 {
+    text-align: center;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: small;
+}
+.box h2:hover {
+    cursor: pointer;
+}
+
+.box:nth-child(even) {
+    color: white;
+}
+.box p {
+    font-family: 'denk one';
+    color: #FFBF73;
+}
+.box1, .box2, .box3 {
+    overflow: hidden;
+}
+.boxes {
+    border-top-style: solid;
+    width: 100%;
+}
+.controls {
+    text-align: center;
+    margin: 0 auto 1em;
+}
+
+.cat-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cat {
+    background: #FFDC00;
+    line-height: 50px;
+    text-align: center;
+    margin: .5em;
+}
+
+.remove-cat {
+    background: #000;
+    color: #FFF;
+    padding: 0.25em;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.flex-container {
+    margin: 0 auto;
+    background: rgb(251, 247, 251);
+}
+.flex-content {
+    padding: 0;
+}
+.footer {
+    width: 100%;
+    height: 25em;
+    background: #64AAD0;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    -webkit-order: 5;
+    order: 5;
+}
+.header {
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    -webkit-order: 1;
+    order: 1;
+    color: white;
+    text-align: left;
+}
+.icons {
+    width: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: right;
+    background: #64AAD0;
+    margin-top: -3.75em;
+    float:left;
+
+}
+.icons i {
+    display: block;
+    font-size: 1.5em;
+    line-height: 50px;
+    width: 60px;
+    text-align: center;
+}
+.icons a {
+    text-decoration: none;
+    color: white;
+    display:  inline-block;
+    margin: .8em;
+    border-radius: 5em;
+    position: relative;
+}
+.icons a:before, .icons a:after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+}
+.icon-twitter {
+    background-image: url(http://i.imgur.com/A2jlFEP.png)
+}
+.ohman-content {
+    min-height: 5.7em;
+    width: 100%;
+    -webkit-order: 3;
+    order: 3;
+    background: rgb(251, 247, 251);
+}
+.post {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: auto;
+    /*min-height: 5em;*/
+    max-height: 55em;
+    /*height: 35em;*/
+    /*max-width: 40%;*/
+    background: rgb(251, 247, 251);
+    float: left;
+    overflow: hidden;
+    border-right-color: white;
+    color: #034569;
+    text-align: left;
+}
+
+.post p:first-of-type {
+    color: black;
+    border-bottom: solid;
+    border-left-color: white;
+    border-bottom-color: #034569;
+}
+.post h3 {
+    text-align: center;
+    font-size: medium;
+    font-family: 'Josefin sans', sans-serif;
+    color: rgb(251, 247, 251);
+    background-color: #64AAD0;
+    border-bottom: solid;
+    line-height: 3.6em;
+    min-height: 4.9em;
+    text-shadow: .7415px .7415px .500001px #262626;
+}
+
+.post-content {
+    overflow: auto;
+    height: 65%;
+    margin-right: -1em;
+}
+
+.project {
+    margin-left: .75em;
+    flex-basis: 50%;
+    flex-grow: 1;
+    width: 33%;
+    /*max-width: 40%;*/
+    text-align: left;
+}
+.project h3 {
+    font-size: large;
+    font-family: 'Josefin sans', sans-serif;
+    color: rgb(251, 247, 251);
+    background-color: #64AAD0;
+    border-bottom: solid;
+    line-height: 3.6em;
+    width: 100%;
+    margin-bottom: .01em;
+    min-height: 5em;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: .7415px .7415px .500001px #262626;
+}
+.primary {
+    border-bottom: black;
+    border-left: black;
+    border-right: black;
+    -webkit-order: 3;
+    order: 3;
+}
+.secondary {
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    -webkit-order: 4;
+    order: 4;
+    text-align: center;
+    background: rgb(251, 247, 251);
+}
+.sidebar {
+    width: 100%;
+    padding: 1em 0;
+}
+.side-url a {
+    text-decoration: none;
+    color: black;
+    overflow-wrap: break-word;
+}
+.toggle-cat {
+    background: black;
+}
+.fb {
+    background: #3B5997;
+}
+.gh {
+    background: black;
+}
+.gh {
+    color:#999;
+    background-color: black;
+    background-image: linear-gradient(gray, rgba(255,255,255,0));
+}
+.li {
+    background: #007DB8;
+}
+
+.tw, .fb, .gh, .li {
+    width: 10%;
+    text-align: center;
+    line-height: 150%;
+}
+
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+@supports (flex-wrap: wrap) {
+    .box1, .box2, .box3 {
+        -webkit-flex-grow: 5;
+                flex-grow: 5; 
+    }
+    .ohman-content {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+}
+@media (orientation : portrait) {
+    .ohman-content {
+        width: 100%;
+        -webkit-order: 2;
+        order: 2;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    #blog {
+        display: block;
+        width: 90%;
+    }    
+    #side-projects {
+        display: block;
+        width: 90%;
+        text-indent: 0;
+    }
+    #blog, #side-projects {
+        flex-flow: column wrap;
+    }
+    .banner {
+        text-align: center;
+        font-size: 2.75em;
+    }
+    .icons {
+        margin-top: 0;
+        text-align: center;
+    }
+    .post, .project {
+        width: auto;
+        max-width: available;
+        max-width: -webkit-fill-available;
+        max-width: -moz-available;
+    }
+    .primary {
+        width: 100%;
+        height: 33.333%;
+    }
+    .box {
+        border-bottom-style: solid;
+    }
+    .secondary {
+        -webkit-order: 3;
+        order: 3;
+    }  
+    .box1 {
+        order: 3;
+        width: 100%;
+        height: 33.333%;
+        float: left;
+        display: none;
+    }
+    .box2 {
+        order: 4;
+        width: 100%;
+        height: 33.333%;
+        float: left;
+    }
+    .box3 {
+        width: 100%;
+        height: 33.333%;
+        -webkit-flex-grow: 2;
+                flex-grow: 2;
+        -webkit-order: 5;
+                order: 5;
+        float: left;
+    }
+    .sidebar {
+        width: 100%;
+        height: 33.333%;
+    }
+}

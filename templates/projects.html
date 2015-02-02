@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block projects %}
+    <article id="side-projects" class='flex-content'>
+	{% for project in projects %}
+		<div class='project flex-container'>
+	        <h3><a href={{project.url}}>{{project.title}}</a></h3><br>
+	        <p class='side-url'><a href={{project.url}}>{{project.url}}</a>
+	        <br>
+	        {{project.blurb}}
+	        </p>
+		</div>
+
+	{% endfor %}
+
+	</article>
+
+{% endblock %}
